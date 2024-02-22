@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.block {
+  display: block;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background: url("images/backgroundimg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+nav {
+  height: 13%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 80px;
+  width: 80px;
+  border-radius: 30%;
+}
+
+nav .links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin-left: 45px;
+  padding: 17px;
+  border-radius: 15px;
+  box-shadow: -1.5px 1.5px 19.5px -5px #edbb05;
+  background-color: #e1be41ca;
+}
+.hamburger img {
+  height: 30px;
+}
+.main .sidebar {
+  display: none;
+  background: rgb(5, 68, 104);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  animation: slideMenu 1s ease-in-out;
+  z-index: 10;
+}
+@keyframes slideMenu {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.sidebar .profile {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.sidebar .profile img {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.sidebar ul li a {
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid #10558d;
+  color: rgb(241, 237, 237);
+  font-size: 19px;
+  position: relative;
+  text-decoration: none;
+  transition: ease-in-out 200ms;
+}
+
+.sidebar ul li a .icon {
+  color: #fec909;
+  width: 35px;
+  display: inline-block;
+}
+.sidebar ul li a:hover {
+  background-color: #c6a11b;
+  color: black;
+}
+.close {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  font-size: 29px;
+}
+
+/* curosal style */
+
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  padding: 10px 20px;
+  margin: auto;
+}
+.slideshow-container .mySlides img {
+  height: 60vh;
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 0;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 20px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: rgb(231, 8, 8);
+  font-size: 26px;
+  font-weight: 600;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #0ce033;
+  font-size: 19px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*end of curosal styling*/
+.break {
+  height: 15px;
+  width: 100%;
+  background: linear-gradient(
+    100deg,
+    rgb(1, 238, 255),
+    rgb(0, 0, 0),
+    rgb(0, 255, 179)
+  );
+}
+.booking_section {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    130deg,
+    rgba(0, 0, 0, 0.534),
+    rgba(25, 47, 120, 0.605),
+    rgba(0, 0, 29, 0.555)
+  );
+  overflow-y: scroll;
+}
+
+/* grids images */
+.row {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+@media only screen and (max-width: 700px) {
+  .main .sidebar {
+    background: rgba(97, 75, 169, 0.562);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  nav .links {
+    display: none;
+  }
+  nav {
+    justify-content: space-around;
+  }
+  .hamburger img {
+    position: relative;
+    margin-left: -30px;
+  }
+  .logo img {
+    position: relative;
+    margin-left: 160px;
+  }
+  .main .sidebar {
+    width: 230px;
+    height: 100%;
+  }
+  .next {
+    right: 20px;
+    border-radius: 3px 0 0 3px;
+  }
+  .slideshow-container .mySlides img {
+    height: 40vh;
+    width: 100%;
+    border-radius: 10px;
+  }
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+  }
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
